@@ -1,0 +1,557 @@
+*
+{
+    font-family: "方正等线";
+    letter-spacing: 1.5;
+}
+
+html, body /*解决position:fixed,在IE下滑时抖动（注：查的文章中说可能会导致原来的页面布局出现问题，慎重使用）*/
+{
+    height:100%;
+    overflow: auto;
+    margin: 0; /*此句可不加，reset里已经设为0*/
+}
+
+.box
+{
+    width: 100%;
+    margin: 0 auto; 
+}
+
+.background
+{
+    width: 100%;
+    height: 100%;
+    background: url(../images/background.jpg) no-repeat;
+    margin: 0 auto;
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+}
+
+.floatleft
+{
+    float: left;
+}
+
+.floatright
+{
+    float: right;
+}
+
+/* .header-wrapper
+{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #ffffff;
+    z-index: -1;
+
+    -webkit-box-shadow: 0px -6px 15px black;
+    -moz-box-shadow: 0px -6px 15px black;   
+    box-shadow: 0px -6px 15px black;
+} */
+.header /*顶部样式*/
+{
+    width: 1349px;
+    height: 112px;
+    margin: 0 auto;
+    background: #ffffff;
+    position: fixed;
+    top: 0px;
+    /* display: none; */
+    z-index: 1;
+
+    -webkit-box-shadow: 0px -6px 15px black;
+    -moz-box-shadow: 0px -6px 15px black;   
+    box-shadow: -15px -6px 15px black;
+    
+}
+
+.header img
+{
+    margin: 12 0 0 20;
+}
+
+.toprighticon
+{
+    width: 200px;
+    margin-top: 23px;
+    margin-right: 20px;
+}
+
+.aboutus
+{
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    background: url(../images/aboutus.png);
+    cursor: pointer;
+}
+
+.searchlogo
+{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(../images/search.png);
+    cursor: pointer;
+}
+.search input
+{
+    width: 150px;
+    border: 0;
+    border-bottom: 1px solid #7280b7;
+    display: none;
+
+}
+
+.headerlink
+{
+    width: 980px;
+    height: 30px;
+    /* margin: 0 auto;
+    margin-top: 70px; */
+    /* z-index: 1; */
+
+    position: absolute;
+    top: 70px;
+    left: 185px;  
+}
+
+.headerlinkbox
+{
+    width: 350px;
+    height: 30px;
+    /* background: green; */
+}
+
+/* .headerlink ul
+{
+    width: 350px;
+    height: 30px;
+    background: green;
+} */
+
+.square1  /*颜色方块*/
+{
+    width: 8px;
+    height: 30px;
+    background: #5677fc;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.headerlink a
+{
+    font-size: 14px;
+    color: #78909c;
+    float: left;
+    font-weight: bold;
+    margin: 0 40 0 25;
+    line-height: 30px;
+}
+
+.dynamicbutton  /*动态选项卡按钮*/
+{
+    width: 100px;
+    height: 30px;
+}
+
+.dynamicusername
+{
+    color: #7280b7;
+    font-size: 13px;
+    float: left;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.dynamiccircle 
+{
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 50%;
+    background: #ffd135;
+    cursor: pointer;    
+}
+
+/*顶部投票标题显示区*/
+.headervoteshow
+{
+    width: 1026px;
+    height: 98px;
+    background: #5677fc;
+    position: absolute;
+    top: 70px;
+    left: 170px;
+    color: #ffffff;
+    display: none;
+}
+
+.headervoteshow p
+{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 36px;
+    line-height: 100px;
+}
+
+
+/*用户卡片*/
+
+.usercard
+{
+    width: 1026px;
+    height: 360px;
+    background: #fafafa;
+    position: absolute;
+    top: 112px;
+    left: 170px;
+    z-index: 2;
+    display: none;
+
+    -webkit-box-shadow: 0px 0px 5px black;
+    -moz-box-shadow: 0px 0px 5px black;   
+    box-shadow: 0 0 0, 0 0 0, 0 2px 3px #e1e1e1, 0 0 0; 
+ }
+
+ .usercircle /*用户头像*/
+ {
+    width: 84px;
+    height: 84px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 84px;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 50%;
+    background: #ffd135;   
+    position: absolute;
+    top: 37px; 
+    left: 36px;
+ }
+
+ .userinformation /*用户信息*/
+ {
+    width: 80;
+    height: 110;
+    position: absolute;
+    top: 37px;
+    left: 150px;
+    color: #78909c;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+ }
+
+ .userinformation span
+ {
+    color: #7280b7;
+ }
+
+ .usergrade /*当选率与积分*/
+ {
+    width: 164;/*204*/
+    height: 45;
+    position: absolute;
+    top: 200px;
+    left: 36px;
+    background: #ffd135;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10 20 0 20;
+ }
+
+  .usergrade span
+  {
+    font-size: 11px;
+  }
+
+ .dangxuanlv /*当选率*/
+ {
+    width: ;
+    height: ;
+
+ }
+
+ .grade
+ {
+    width: ;
+    height: ;
+ }
+
+ .logout /*注销用户与编辑*/
+ {
+    width: 175px;
+    height: 20px;
+    color: #546e7a;
+    font-size: 12px;
+    position: absolute;
+    bottom: 40px;
+    left: 37px;
+
+ }
+
+ .editor /*编辑操作*/
+ {
+    margin-right: 15px;
+    cursor: pointer;
+ }
+
+.logout span
+{
+    color: #e51c23;
+}
+
+ .useractive /*用户相关操作选项卡*/
+ {
+    width: 787;
+    height: 335;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+ }
+
+.useractive p
+{
+    color: #90a4ee;
+    font-size: 11px;
+}
+
+.activecard
+{
+    width: 204;
+    height: 335;
+    margin-left: 24px;
+    font-size: 12px;
+}
+
+.activecard li
+{
+    padding: 10 20 0 15;
+    color: #ffffff;
+    margin-top: 16px;
+}
+
+.invitedme li
+{
+    width: 169;/*204*/
+    height: 75;/*85*/
+    background: #5677fc;
+    
+}
+
+.voteresult li
+{
+    width: 169;
+    height: 122;
+    background: #2baf2b;
+}
+
+.ilaunch li
+{
+    width: 169;
+    height: 122;
+    background: #7280b7;
+}
+
+
+
+ .newvote /*新建投票*/
+ {
+    width: 50px;
+    height: 49px;
+    position: absolute;
+    bottom: 27px;
+    right: 28px;
+    background: url(../images/newvote.png);
+    cursor: pointer;
+ }
+
+.maincard  /*主卡片投票区*/
+{
+    width: 1026px;
+    height: 1500px; /*高度不设值，现用于测试*/
+    background:  #fafafa;
+    border-radius: 1px;
+    /* margin: 38 auto 0 auto; */
+    position: absolute;
+    top: 139px;
+    left: 170px;
+    overflow: hidden;
+   /* z-index: 2; */
+}
+
+.maincard ul li
+{
+    margin-bottom: 10px;
+    float: left;
+    /* position: relative; */
+    /* z-index: 2; */
+}
+
+.votetop
+{
+    height: 113px;
+    color: #ffffff;
+    background: #5677fc;
+    position: relative;
+    /* z-index: 2; */
+
+    -webkit-box-shadow: 0px 0px 5px black;
+    -moz-box-shadow: 0px 0px 5px black;   
+    box-shadow: 0px 0px 5px black;   
+}
+
+.votetitle
+{
+    
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 25px;
+    left: 38px;
+}
+
+.votedetail
+{
+    width: 680px;
+    color: #fafafa;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    top: 60px;
+    left: 38px;
+}
+
+.votetime
+{
+    position: absolute;
+    top: 28px;
+    right: 100px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.votetime span
+{
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.closevote
+{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    background: url(../images/closevote.png);
+    cursor:pointer;
+}
+
+.numlimit /*剩余选项个数*/
+{
+    width: 50px;
+    height: 50px;
+    color: #5677fc;
+    background: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    right: 25px;
+
+    -webkit-box-shadow: 0px 2px 1px black;
+    -moz-box-shadow: 0px 2px 1px black;   
+    box-shadow: 0px 1px 1px black;
+}
+
+.voteover
+{
+    width: 48px;
+    height: 48px;
+    background: url(../images/voteover.png);
+    position: absolute;
+    bottom: -25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.votecard
+{
+    margin: 35 0 0 22;
+}
+
+.votecard ul li
+{
+    float: left;
+    width: 204px;
+    height: 272px;
+    margin: 0 0 37px 25px ;
+    border: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.votecard ul li img
+{
+    width: 204px;
+    height: 153px;
+    cursor: pointer;
+}
+
+.checked
+{
+    /* width: 34px;
+    height: 34px; */
+    width: 204px;
+    height: 272px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid #2baf2b;
+    background: url(../images/checked.png) no-repeat 150px 134px;
+    display: none;
+}
+
+.cardtext
+{
+    width: 170px;
+    height: 102px;
+    background: #ffffff;
+    padding-top: 15px;
+    padding-left: 17px;
+}
+
+.cardtext span
+{
+    font-size: 14px;
+    color: #546e7a;
+    font-weight: bold;
+    line-height: 25px;
+
+}
+
+.cardtext p
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: #78909c;
+    margin-top: 5px;
+}
+
+
+
+
+

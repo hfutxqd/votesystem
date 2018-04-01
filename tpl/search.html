@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<title>投票系统</title>
+	<style>
+	#title{
+	background-color: #6DC7E6;
+	text-align: center;
+	}
+	.content{
+	background-color: #C4D8F5;
+	text-align: center;
+	padding: 40px;
+	}
+	.item{
+	background-color: #C4F5C5;
+	text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<div id="title"> 
+		<a href="<{spUrl c=main a=index}>">合肥工业大学网络实名投票系统</a><br>
+		<{if $login == false}>
+		<a href="<{spUrl c=main a=login}>">立即登陆</a>
+		<{else}>
+		欢迎您，<a href="<{spUrl c=main a=logingo}>"><{$user_name}></a><br>
+		<form action="<{spUrl c=main a=search}>" method="post">
+			<input type="text" name="swd" size="20"/>
+			<input type="submit" value="搜索"/>
+		</from>
+		<{/if}>
+	</div>
+	<form></form>
+	<{foreach item = ct_value from = $content}>
+	<form  action="<{spUrl c=user a=vote}>" method="post">
+		<div class="content" width="1080px">
+			<img src="<{$ct_value['ct_images']}>"  width="300px" /><br>
+			投票名称：<{$ct_value['ct_name']}><br>
+			投票内容：<{$ct_value['ct_content']}><br>
+			投票类型：<{$ct_value['ct_type']}>选<br>
+			结束时间：<{$ct_value['ct_offtime']}><br>
+			<!-- <{if $login == true}>
+			您已投<{$count[$ct_value['ct_id']]}>票，还剩<font color="red"><{$ct_value['ct_type']-$count[$ct_value['ct_id']]}></font>票<br>
+			<{/if}> -->
+			<br>
+			
+			<{foreach item = it_value from = $items[$ct_value['ct_id']]}>
+			
+				<div class="item" width="900px">
+					<img src="<{$it_value['it_image']}>"  width="200px"/><br/>
+					选项名称：<{$it_value['it_name']}><br>
+					选项内容：<{$it_value['it_content']}><br>
+					数量：<{$it_value['it_count']}><br>
+					<input type="checkbox" name="it[]" value="<{$it_value['it_id']}>"/>
+				</div>
+				<br><br>
+			<{/foreach}>
+			<{if $ct_value.ct_limType == 2}>
+					密码：<input type="text" name="ct_passwd" size="20"/>
+			<{/if}>
+			<input type="hidden" name="ct" value="<{$ct_value['ct_id']}>"/>
+			<input type="submit" value="投票" />
+			
+		</div>
+		<br><br>
+	</form>
+	<{/foreach}>
+</body>
+</html>

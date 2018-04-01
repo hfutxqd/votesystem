@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+function abc(content)
+{
+	alert(content);
+}
+$(document).ready(function(){
+  $("#b01").click(function()
+  {
+	  htmlobj=$.getJSON("http://vote.hfut.edu.cn/votesystem/index.php?c=main&a=index", function(json){
+  alert("JSON Data: " + json.toSource());
+	});
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="myDiv"><h2>显示结果</h2></div>
+<button id="b01" type="button">注册</button>
+
+</body>
+
+
+</body>
+</html>

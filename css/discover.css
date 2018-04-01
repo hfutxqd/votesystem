@@ -1,0 +1,152 @@
+.discovertcard  /*发现区域*/
+{
+    width: 1050px;
+    height: 769px;
+    border-radius: 1px;
+    position: absolute;
+    top: 139px;
+    left: 170px;
+}
+
+.discovertcard ul li
+{
+    width: 501px;
+    margin-bottom: 16px;
+    /* margin-right: 24px; */
+    float: left;
+    background:  #fafafa;
+    border-bottom: 2px solid #dfdede;
+    overflow: hidden;
+    border-radius: 2px;
+     position: relative;
+
+    /* -webkit-box-shadow: 0px 0px 3px #313131;
+    -moz-box-shadow: 0px 0px 3px #313131;   
+    box-shadow: 0px 0px 3px #313131;  */
+}
+
+.discoverleft /*未完成卡片区域*/
+{
+    width: 501px;
+    float: left;
+}
+
+.discoverright /*未完成卡片区域*/
+{
+    width: 501px;
+    float: right;
+}
+
+.disvotetop /*未完成卡片样式*/
+{
+    width: 501px;
+    height: 84px;
+    color: #ffffff;
+    background: #5677fc;
+    position: relative;
+}
+
+.disvoteovertop /*完成卡片样式*/
+{
+    width: 501px;
+    height: 84px;
+    color: #ffffff;
+    background: #2baf2b;
+    position: relative;
+}
+
+.disvotetop p, .disvoteovertop p
+{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 25px;
+    left: 38px;
+    width: 425px;
+    height: 50px;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.discovercard
+{
+    margin: 23 0 0 36;
+}
+
+.votecount
+{
+    font-size: 18px;
+    color: #78909c;
+}
+.votecount span
+{
+    font-size:24px;
+    color: #546e7a;
+
+}
+
+.voteremaintime
+{
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    color: #78909c
+}
+
+.voteremaintime span
+{
+    font-size:21px;
+    color: #546e7a
+}
+
+.discovercard ol li
+{
+    width: 430;
+    height: 45px;
+    border: 0;
+   
+
+  
+}
+
+.cardtitle
+{
+    font-size: 15px;
+    font-family: bolder;
+    color: #263238;   
+}
+
+.cardresult /*投票结果*/
+{
+    margin-top: 10px;
+    height: 16px;
+}
+
+.cardresultdiv
+{
+    width: 336px;
+    height: 16px;
+    background: green;
+    float: left;
+}
+
+.cardresult p
+{
+    float: left;
+    margin: ;
+    color: #2baf2b;
+    font-size: 10px;
+    line-height: 16px;
+    margin-left: 17px;
+}
+
+.closediscard
+{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 25px;
+    right: 22px;
+    background: url(../images/closevote.png); 
+    cursor:pointer; 
+}

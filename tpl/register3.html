@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+    <div class="box">
+        <div class="choiceslogo"></div>
+        <div class="loginbox">
+            <div class="loginboxtext">
+                <p>让自己帮别人做选择<br/>让别人帮自己做选择</p>
+            </div>
+
+            <div class="loginboxinputarea">
+                <input id="username" type="text" class="logininput" placeholder='用户名' autocomplete="off"/>
+                <input id="psw" type="password" class="logininput" placeholder='密码'>
+                <input id="confirmpsw" type="password" class="logininput" placeholder='确认密码'>
+
+                <p class="usernamerrortext"></p>
+                <p class="pswerrortext"></p>
+                <p class="confirmpswerrortext">两次密码不一致</p>
+            </div>
+                
+            <div class="loginboxBottom">
+                <a href="<{spUrl c=main a=login}>">登录</a>
+                <span>或</span>
+                <a href="<{spUrl c=main a=index}>">浏览网站</a>
+                
+                <input id="submitbtn" class="registersubmitbtn" type="submit" value="">
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+</body>
+</html>

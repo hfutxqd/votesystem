@@ -1,0 +1,528 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#box
+{
+	width: 1366px;
+	height: 768px;
+	margin: 0px auto;
+	background: url(../images/background.jpg);
+	position: relative;
+}
+
+#top
+{
+	width: 1366px;
+	height: 57px;
+	background: #ffffff;
+	position: fixed;
+	z-index: 11;
+}
+
+#topimg1
+{
+	width: 96px;
+	height: 32px;
+	position: absolute;
+	top: 10px;
+	left: 35px;
+	background: url(../images/choices1.jpg);
+}
+
+#square1  /*颜色方块*/
+{
+	width: 9px;
+	height: 30px;
+	background: #5677fc;
+	position: absolute;
+	top: 16px;
+	left: 172px;
+}
+
+#toplink
+{
+	width: 210px;
+	height: 18px;
+	position: absolute;
+	top: 21px;
+	left: 199px;
+
+}
+
+#toplink a
+{
+	color: #8197a3;
+	float: left;
+}
+
+#toplink span
+{
+	margin: 0 55px;
+}
+
+#searchbox /*搜索框*/
+{
+	position: absolute;
+	top: 18px;
+	left: 729px;
+}
+
+#searchbox input
+{
+	width: 185px;
+	height: 24px;
+	border-left: 0;
+   	border-right: 0;
+   	border-top: 0;
+   	border-bottom: 1px solid #aaaaaa;
+}
+
+#searchboxlogo
+{
+	width: 18px;
+	height: 20px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url(../images/search.jpg);
+}
+
+#dynamiccardButton /*动态卡片开启按钮*/
+{
+	width: 80px;
+	height: 38px;
+	position: absolute;
+	top: 10px;
+	right: 270px;
+	display: none;
+}
+
+.buttonstyle1 /*动态选项卡按钮*/
+{
+	width: 38px;
+	height: 38px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 38px;
+	font-size: 20px;
+	border-radius: 50%;
+	background: #ffd135;
+	cursor: pointer;
+}
+
+#dynamiccardButton span
+{
+	position: absolute;
+	top: 14px;
+	right: 0px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+#toptext  /*顶部文字*/
+{
+	width: 114px;
+	height: 36px;
+	background: url(../images/toptext.jpg);
+	position: absolute;
+	top: 9px;
+	right: 28px;
+}
+
+#maincard  /*主卡片*/
+{
+	width: 750px;
+	height: 694px;
+	background: #ffffff;
+	position: absolute;
+	top: 74px;
+	left: 164px;
+}
+
+#maincardtop 
+{
+	width: 750px;
+	height: 58px;
+	background: #fbfbfb;
+}
+
+#square2
+{
+	width: 17px;
+	height: 58px;
+	background: #5677fc;
+}
+
+#maincardtoptitle  /*显示投票名称*/
+{
+	height: 22px;
+	color: #5f7783;
+	position: absolute;
+	top: 17px;
+	left: 28px;
+	font-size: 20px;
+
+}
+
+#maincardtoptime /*显示剩余时间区域*/
+{
+	width: 150px;
+	height: 22px;
+	position: absolute;
+	top: 17px;
+	right: 70px;
+	color: #5f7783;
+	font-size: 18px;
+}
+
+#maincardtoptime span
+{
+	color: #78909c;
+	margin: 0 5px;
+	font-weight: bold;
+	font-size: 16px;
+
+}
+
+#maincardbottom
+{
+	width: 736px;
+	height: 584px;
+	position: absolute;
+	top: 79px;
+	overflow: hidden;
+}
+
+#maincardbottom ul li
+{
+	float: left;
+	width: 220px;
+	height: 282px;
+	margin: 0 0 18px 23px ;
+	background: #fbfbfb;
+	
+	position: relative;
+}
+
+#maincardbottom ul li img
+{
+	
+	width: 220px;
+	height: 154px;
+	cursor: pointer;
+}
+
+.cardtext
+{
+	width: 200px;
+	height: 100px;
+	line-height: 20px;
+	margin: 13px 0 0 17px;
+}
+
+.cardtext b
+{
+	font-size: 16px;
+	color: black;
+}
+
+.cardtext span
+{
+	font-size: 15px;
+	color: #899ea9;
+}
+
+.buttonstyle2 /*提交按钮*/
+{
+	width: 75px;
+	height: 75px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 75px;
+	font-size: 25px;
+	border-radius: 50%;
+	background: #2baf2b;
+	cursor: pointer;
+	position: absolute;
+	bottom: 33px;
+	right: 17px;
+
+}
+
+
+#dynamiccard  /*动态卡片*/
+{
+	width: 257px;
+	height: 680px;
+	position: absolute;
+	top: 75px;
+	left: 940px;
+	border-radius: 5px;
+	background: #ffffff;
+	overflow: hidden;
+}
+
+#person
+{
+	width: 257px;
+	height: 150px;
+	position: relative;
+}
+
+.buttonstyle3 /*logo按钮*/
+{
+	width: 90px;
+	height: 90px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 90px;
+	font-size: 40px;
+	border-radius: 50%;
+	background: #ffd135;
+	position: absolute;
+	top: 28px;
+	left: 25px;
+
+}
+
+#guanbi
+{
+	width: 17px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 8px;
+	background: url(../images/guanbi.jpg);
+	cursor: pointer;
+}
+
+#shehzhi
+{
+	width: 21px;
+	height: 20px;
+	position: absolute;
+	top: 40px;
+	right: 8px;
+	background: url(../images/shezhi.jpg);
+	cursor: pointer;
+}
+
+#personlink
+{
+	width: 65px;
+	height: 70px;
+	position: absolute;
+	top: 45px;
+	right: 40px;
+	text-align: right;
+	line-height: 25px;
+}
+
+#personlink a
+{
+	color: #a5b5bd;
+	font-size: 15px;
+}
+
+#personlink span
+{
+	color: #6b818c;
+}
+
+#recentlyResult
+{
+	width: 257px;
+	height: 165px;
+	position: absolute;
+	top: 150px;
+}
+
+#recentlyResultTitle
+{
+	width: 90px;
+	height: 17px;
+	color: #a5b5bd;
+	position: absolute;
+	left: 25px;
+	font-size: 13px;
+	font-style:italic;
+}
+
+#square3
+{
+	width: 12px;
+	height: 38px;
+	background: #2baf2b;
+	position: absolute;
+	top: 24px;
+}
+
+#votetitle1
+{
+	width: 210px;
+	height: 38px;
+	position: absolute;
+	top: 24px;
+	left: 12px;
+	background: #fbfbfb;
+	line-height: 38px;
+	font-size: 15px;
+	color: #adb9bf;
+	padding-left: 10px;
+}
+
+#detail
+{
+	width: 213px;
+	height: 76px;
+	position: absolute;
+	top: 70px;
+	left: 12px;
+	background: #fbfbfb;
+	border: 1px solid #f0f0f0;
+}
+
+#detailName
+{
+	width: 110px;
+	height: 76px;
+	color: black;
+	line-height: 76px;
+	text-align: center;
+}
+
+#detailimg
+{
+	width: 103px;
+	height: 76px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url(../images/tushuguan.jpg);
+}
+
+#myvote
+{
+	width: 257px;
+	height: 165px;
+	position: absolute;
+	top: 315px;
+}
+
+#myvoteTitle
+{
+	width: 90px;
+	height: 17px;
+	color: #a5b5bd;
+	position: absolute;
+	left: 25px;
+	font-size: 13px;
+	font-style:italic;
+}
+
+#square4
+{
+	width: 12px;
+	height: 38px;
+	background: #7280b7;
+	position: absolute;
+	top: 24px;
+}
+
+#votetitle2
+{
+	width: 210px;
+	height: 38px;
+	position: absolute;
+	top: 24px;
+	left: 12px;
+	background: #fbfbfb;
+	line-height: 38px;
+	font-size: 12px;
+	color: #adb9bf;
+	padding-left: 10px;
+}
+
+
+#myvote2
+{
+	width: 257px;
+	height: 165px;
+	position: absolute;
+	bottom: 45px;
+}
+
+#square5
+{
+	width: 12px;
+	height: 38px;
+	background: #5677fc;
+	position: absolute;
+	top: 24px;
+}
+
+#votetitle3
+{
+	width: 210px;
+	height: 38px;
+	position: absolute;
+	top: 24px;
+	left: 12px;
+	background: #fbfbfb;
+	line-height: 38px;
+	font-size: 15px;
+	color: #adb9bf;
+	padding-left: 10px;
+}
+
+#voteDetail a
+{
+	width: 257px;
+	height: 25px;
+	position: absolute;
+	bottom: 10px;
+	color: #98a8af;
+	text-align: center;
+}
+
+.checked /*卡片选中样式*/
+{
+	width: 220px;
+	height: 282px;
+	border: 1px solid #2baf2b;
+	background: url(../images/check.png) no-repeat 77px 54px; 
+	position: absolute;
+	top: 0px;
+	display: none;
+	z-index: 1;
+}
+
+#show
+{
+	width: 1366px;
+	height: 768px;	 
+	z-index: 110;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 12;
+	display: none;
+}
+
+#showContent
+{
+	width: 500px;
+	height: 640px;
+	background: green;/*#fbfbfb; */
+	position: absolute;
+	top: 86px;
+	left: 440px;
+	display: none;
+	cursor: pointer;
+	z-index: 13;
+
+}

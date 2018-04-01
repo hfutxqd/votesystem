@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<title>欢迎使用投票系统</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css"/>
+<script src="./jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<style>
+body{margin: 0px;border: 0px;background-color: #F2F2F2;}
+</style>
+</head>
+<body style="text-align: center;">
+<div style="margin:auto; text-align:left; width: 400px; background:#C4D8F5;">
+请完善资料，否则将不能享受所有服务<br>
+<br>
+	<p>
+	学号：<{$userinfo['user_id']}><br>
+	姓名：<{$userinfo['user_name']}><br>
+	学院：<{$userinfo['user_school']}><br>
+	<form action="<{spUrl c=user a=editUserInfo}>" method="post">
+	专业：	<select name = "class" class="form-control">
+				<{foreach $classlist as $class}>
+				<option value="<{$class['class']}>" ><{$class['class']}></option>
+				<{/foreach}>
+				</select><br>
+	年级：<input name="grade" class="form-control"  placeholder='填四位数字'/><br>
+	班级：<input name="classroom" class="form-control"  placeholder='填数字' /><br>
+	<input type="submit" value="确定" class="btn btn-primary"/>
+	<a href="<{spUrl c=user a=userindex}>" style="float:right; margin-right:10px;">我不想填写</a>
+	</form>
+	</p>
+</div>
+</body>
+</html>

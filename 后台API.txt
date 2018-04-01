@@ -1,0 +1,17 @@
+注册接口 
+地址：c=main&a=registergo
+参数：user_nkname, user_password, user_password2
+返回类型：text
+返回："注册成功！"，	"两次输入密码不一致！"， 	or 其他错误信息
+
+登陆接口
+地址：c=main&a=login
+参数：user_id, user_password, remember
+返回类型：json
+返回：
+失败：array(
+				'success'=>false,
+				'acl'=>''
+				)
+
+

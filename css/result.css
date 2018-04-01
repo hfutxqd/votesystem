@@ -1,0 +1,126 @@
+.resultcard  /*结果区域*/
+{
+    width: 1026px;
+    height: 769px;
+    border-radius: 1px;
+    position: absolute;
+    top: 139px;
+    left: 170px;
+}
+
+
+.resultcard ul li
+{
+    width: 1026px;
+    margin-bottom: 36px;
+    float: left;
+    background:  #fafafa;
+    border-bottom: 2px solid #dfdede;
+    overflow: hidden;
+}
+
+.resvotetop
+{
+    width: 1026px;
+    height: 112px;
+    color: #ffffff;
+    background: #2baf2b;
+    position: relative;
+    /* z-index: 2; */
+
+    -webkit-box-shadow: 0px 0px 3px #313131;
+    -moz-box-shadow: 0px 0px 3px #313131;   
+    box-shadow: 0px 0px 3px #313131;   
+}
+
+.resnumlimit /*选项个数提示*/
+{
+    width: 48px;
+    height: 48px;
+    color: #2baf2b;
+    background: #ffffff;
+    text-align: center;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -24px;
+    right: 27px;
+
+    -webkit-box-shadow: 0px 2px 1px #bbbbbb;
+    -moz-box-shadow: 0px 2px 1px #bbbbbb;
+    box-shadow: 0px 2px 2px #bbbbbb;
+}
+
+.resvotecard
+{
+    margin: 35 0 0 36;
+}
+
+.resvotecard ol li
+{
+    width: 1000;
+    height: 73px;
+    border: 0;
+    position: relative;
+
+  
+}
+
+.cardtextname
+{
+    width: 100px;
+    height: 25px;
+}
+
+.cardtitle
+{
+    font-size: 15px;
+    font-family: bolder;
+    color: #263238;
+    line-height: 25px;
+    position: absolute;
+    top: 0;
+    left: 42px;
+}
+
+.usercheckcircle  /*用户选了该项标识*/
+{
+    width: 25px;
+    height: 25px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 50%;
+    background: #ffd135;   
+}
+
+.cardresult /*投票结果*/
+{
+    width: 1000px;
+    height: 36px;
+    position: absolute;
+    top: 37px;
+    left: 41px;
+}
+
+.cardresultdiv
+{
+    width: 700px;
+    height: 36px;
+    background: #78909c;
+    float: left;
+}
+
+.cardresult p
+{
+    float: left;
+    margin: ;
+    color: #2baf2b;
+    font-size: 12px;
+    line-height: 36px;
+    margin-left: 17px;
+}

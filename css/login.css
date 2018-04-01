@@ -1,0 +1,163 @@
+*
+{
+    font-family: "方正等线";
+}
+
+.box
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background:url(../images/background.jpg) no-repeat;
+}
+
+.choiceslogo
+{
+    width: 298px;
+    height: 141px;
+    position: absolute;
+    top: 108px;
+    left: 347px;
+    background: url(../images/choiceslogo.png);
+}
+
+.loginbox
+{
+    width: 381px;
+    height: 530px;
+    position: absolute;
+    top: 103px;
+    left: 644.6px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #ffffff;
+
+    -webkit-box-shadow: 0px 0px 15px black;
+    -moz-box-shadow: 0px 0px 15px black;   
+    box-shadow: 0px 0px 20px black;
+}
+
+.loginboxtext
+{
+    height: 105px;
+    background: #5677fc;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.loginboxinputarea
+{
+    width: 270px;
+    height: 120px;
+    margin-top: 17px;
+    margin: 0 auto;
+    margin-top: 55px;
+    
+}
+
+.loginboxinputarea input
+{
+    width:270px;
+    height:30px;
+    margin-bottom: 55px;    
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #aaaaaa;
+    font-size: 15px;
+    color: #263238;
+}
+
+.loginboxinputarea input::-webkit-input-placeholder { color:#bfcbd0;  font-style: italic;}/*ff*/
+.loginboxinputarea input::-moz-placeholder { color:#bfcbd0;  font-style: italic; }/*chrome,safari*/
+.loginboxinputarea input:-ms-input-placeholder{color:#bfcbd0;  font-style: italic;}/*ie10+*/
+
+.inputerror /*用户名错误输入框样式*/
+{
+    width:270px;
+    height:30px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin-bottom: 55px; 
+    border-bottom: 1px solid #f44336;
+    font-size: 15px;
+    color: #263238;
+}
+
+.passworderrortext
+{
+    color: #f44336;
+    font-size: 12px;
+    position: absolute;
+    top: 318px;
+    left: 60px; 
+    display: none;
+}
+
+.loginboxstatus /*记住状态及忘记密码*/
+{
+    height: 35px;
+    position: absolute;
+    bottom: 130px; 
+    left: 55px;
+    color: #546e7a;
+}
+
+.loginboxstatus span
+{
+    margin: 0 18;
+    color: #e0e0e0;
+    font-size: 20px;
+}
+
+.loginboxstatus a
+{
+    color: #546e7a;
+}
+
+.loginboxBottom
+{
+    width: 300px;
+    height: 58px;
+    position: absolute;
+    bottom: 15px;
+    left: 55px;
+    line-height: 58px;
+    font-size: 16px;
+}
+
+.loginboxBottom a
+{
+    color: #546e7a;
+    font-style:italic;
+}
+
+.loginboxBottom span
+{
+    color: #263238;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.buttonstyle
+{
+    width: 58px;
+    height: 57px;   
+    border-radius: 50%;
+    background: url(../images/submit.png);
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: 0px;
+
+    -webkit-box-shadow: 0px 0px 5px #b8b4b4;
+    -moz-box-shadow: 0px 0px 5px #b8b4b4;
+    box-shadow: 0px 1px 5px #b8b4b4;
+}

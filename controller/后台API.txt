@@ -1,0 +1,105 @@
+用户名检测接口 
+地址：c=main&a=isNameExist
+参数：user_nkname
+返回类型：json
+返回：
+可用：array(
+			'avalible'=>false
+			)
+已存在：array(
+			'avalible'=>true
+			)
+			
+注册接口 
+地址：c=main&a=registergo
+参数：user_nkname, user_password, user_password2
+返回类型：json
+返回：
+
+
+
+
+登陆接口
+地址：c=main&a=logingo
+参数：user_id, user_password, remember
+返回类型：json
+返回：
+失败：array(
+		'success'=>false,
+		'acl'=>'',
+		'errorInfo'=>'.....'
+		)			(其中.....表示错误信息，是array类型，键为'user_id'或'user_password'，值为array类型，键为0、1、2……，值为错误信息)
+成功：array(
+		'success'=>true,
+		'acl'=>'.....'
+		'errorInfo'=>''
+		)			('acl'为当前用户模式	可能为pre_user、user、admin)
+
+		
+		
+		
+获取 index数据接口
+地址：c=main&a=getIndexData
+参数：无
+返回类型：json
+返回：
+array(
+	'rest_time'=>$rest_time,
+	'content'=>$ncontent,
+	'items'=>$items
+)
+
+其中$rest_time=array(
+'[投票ID]'=>array(
+		'day'=>[天],
+		'hour'=>[小时],
+		'min'=>[分钟],
+		‘sec’=>[秒数]
+))
+$ncontent = array(
+	[index] => array
+                (
+                    [ct_id] => 115
+                    [ct_type] => 1
+                    [ct_images] => ./attached/content/201504261417163192.png
+                    [ct_limType] => 0
+                    [ct_content] => 第三方卢萨卡回复啥地方了睡觉哈风流我要疯啦发士大夫沙发速度发发
+                    [ct_count] => 2
+                    [ct_name] => 哈利法克斯地方还是大法师
+                    [ct_offtime] => 2015-04-29 00:00:00
+                )
+)
+$items = array
+        (
+            [115] => Array
+                (
+                    [0] => Array
+                        (
+                            [it_id] => 1
+                            [it_name] => 1231221321321312
+                            [it_image] => ./attached/voteitems/201504261417355870.png
+                            [it_count] => 0
+                            [it_content] => 32132131321321321
+                            [ct_id] => 115
+                        )
+
+                    [1] => Array
+                        (
+                            [it_id] => 2
+                            [it_name] => 21321312321312312321
+                            [it_image] => ./attached/voteitems/201504261417356884.jpg
+                            [it_count] => 0
+                            [it_content] => 31243543544354353543
+                            [ct_id] => 115
+                        )
+                )
+        )
+		
+		
+
+搜索接口
+地址：c=main&a=search
+参数：swd
+返回类型：json
+返回：
+同getIndexData

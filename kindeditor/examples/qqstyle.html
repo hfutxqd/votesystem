@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Custom Theme Examples</title>
+		<style>
+			form {
+				margin: 0;
+			}
+			textarea {
+				display: block;
+			}
+		</style>
+		<script charset="utf-8" src="../kindeditor-min.js"></script>
+		<script charset="utf-8" src="../lang/zh_CN.js"></script>
+		<script>
+			KindEditor.ready(function(K) {
+				K.each({
+					'plug-align' : {
+						name : '瀵归绨鏂瑰纺',
+						method : {
+							'justifyleft' : '宸﹀榻?,
+							'justifycenter' : '灞呬腑瀵归绨',
+							'justifyright' : '鍙冲榻?
+						}
+					},
+					'plug-order' : {
+						name : '缂栧佛',
+						method : {
+							'insertorderedlist' : '鏁板瓧缂栧佛',
+							'insertunorderedlist' : '椤圭洰缂栧佛'
+						}
+					},
+					'plug-indent' : {
+						name : '缂╄繘',
+						method : {
+							'indent' : '鍚戝彸缂╄繘',
+							'outdent' : '鍚戝乏缂╄繘'
+						}
+					}
+				},function( pluginName, pluginData ){
+					var lang = {};
+					lang[pluginName] = pluginData.name;
+					KindEditor.lang( lang );
+					KindEditor.plugin( pluginName, function(K) {
+						var self = this;
+						self.clickToolbar( pluginName, function() {
+							var menu = self.createMenu({
+									name : pluginName,
+									width : pluginData.width || 100
+								});
+							K.each( pluginData.method, function( i, v ){
+								menu.addItem({
+									title : v,
+									checked : false,
+									iconClass : pluginName+'-'+i,
+									click : function() {
+										self.exec(i).hideMenu();
+									}
+								});
+							})
+						});
+					});
+				});
+				K.create('#contentqq', {
+					themeType : 'qq',
+					items : [
+						'bold','italic','underline','fontname','fontsize','forecolor','hilitecolor','plug-align','plug-order','plug-indent','link'
+					]
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>QQ椋庢牸</h3>
+		<textarea id="contentqq" name="content" style="width:700px;height:200px;visibility:hidden;"></textarea>
+	</body>
+</html>

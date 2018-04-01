@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>With jQuery UI</title>
+		<style>
+			body {
+				font-size: 12px;
+			}
+			form {
+				margin: 0;
+			}
+			textarea {
+				display: block;
+			}
+			#J_editorDialog {
+				display: none;
+			}
+		</style>
+		<link rel="stylesheet" href="../lib/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+		<link rel="stylesheet" href="../themes/default/default.css" />
+		<script charset="utf-8" src="../lib/jquery.js"></script>
+		<script charset="utf-8" src="../lib/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+		<script charset="utf-8" src="../kindeditor.js"></script>
+		<script charset="utf-8" src="../lang/zh_CN.js"></script>
+		<script>
+			$(function() {
+				$('#J_openDialog').click(function() {
+					$('#J_editorDialog').dialog({
+						title : 'KindEditor',
+						width : 700,
+						open : function(event, ui) {
+							// 镓揿紑Dialog鍚庡垱寤虹紪杈戝櫒
+							KindEditor.create('textarea[name="content"]', {
+								resizeType : 1
+							});
+						},
+						beforeClose : function(event, ui) {
+							// 鍏抽棴Dialog鍓岖Щ闄ょ紪杈戝櫒
+							KindEditor.remove('textarea[name="content"]');
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>鍦╦Query UI Dialog閲屾墦寮€缂栬緫鍣?/h3>
+		<div id="J_editorDialog">
+			<textarea name="content" style="width:100%;height:200px;"></textarea>
+		</div>
+		<button type="button" id="J_openDialog">镓揿紑Dialog</button>
+	</body>
+</html>

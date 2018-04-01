@@ -1,0 +1,490 @@
+
+/* 新建投票卡片样式 */
+.newvotecard 
+{
+    width: 1026px;
+    height: 1000px;
+    background: #ffffff;
+    position: absolute;
+    top: 139px;
+    left: 170px;
+    overflow: hidden;
+    /* display: none; */
+    z-index: 1;
+}
+
+.newvotecardtop 
+{
+    height: 112px;
+    background: #7280b7;
+    position: relative;
+
+    -webkit-box-shadow: 0px 0px 5px black;
+    -moz-box-shadow: 0px 0px 5px black;   
+    box-shadow: 0px 0px 5px black;  
+}
+
+.newvotetitle /*输入投票名称*/
+{
+    width: 500px;
+    height: 22px;
+    color: #eeeeee;
+    position: absolute;
+    top: 25px;
+    left: 38px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 0;
+    background: #7280b7;
+    
+}
+
+.newvotetitle::-webkit-input-placeholder { color:#eeeeee;  font-style: italic;}/*ff*/
+.newvotetitle::-moz-placeholder { color:#eeeeee;  font-style: italic; }/*chrome,safari*/
+.newvotetitle:-ms-input-placeholder{color:#eeeeee;  font-style: italic;}/*ie10+*/
+
+.newvotedetail /*投票说明*/
+{
+    width: 680px;
+    height: 40px;
+    color: #fafafa;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 60px;
+    left: 38px;
+    border: 0;
+    overflow: hidden;
+    background: #7280b7;
+}
+
+.newvotedetail::-webkit-input-placeholder { color:#fafafa;  font-style: italic;}/*ff*/
+.newvotedetail::-moz-placeholder { color:#fafafa;  font-style: italic; }/*chrome,safari*/
+.newvotedetail:-ms-input-placeholder{color:#fafafa;  font-style: italic;}/*ie10+*/
+
+.newvotesetbtn /*详细设置*/
+{
+    width: 16px;
+    height: 16px;
+    background: url(../images/newvoteset.png);
+    position: absolute;
+    top: 28px;
+    right: 43px;
+    cursor: pointer;
+}
+
+.newvoteclosesetbtn
+{
+    width: 10px;
+    height: 10px;
+    background: url(../images/newvotesetclose.png);
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    cursor: pointer;
+    display: none;
+}
+
+.newvotesubmit /*新建投票完成*/
+{
+    width: 50px;
+    height: 50px;
+    background: url(../images/newvotesubmit.png);
+    position: absolute;
+    bottom: -25px;
+    right: 27px;
+    cursor: pointer;
+    border: 50%;
+}
+
+.newvotesetdetailsubmit
+{
+    width: 50px;
+    height: 50px;
+    background: url(../images/newvotesubmit.png);
+    position: absolute;
+    bottom: 25px;
+    right: 27px;
+    cursor: pointer;
+    border: 50%;
+}
+
+.setdetail /*新建投票详细*/
+{
+    width: 1026px;
+    height: 234px;
+    padding-top: 15px;
+    position: absolute;
+    top: 112px;
+    left: 0px;
+    background: #7280b7;
+    color: #78909c;
+    font-size: 12px;
+    display: none;
+    z-index: 1;
+}
+
+.votesetcardtitle
+{
+    float: left;
+    padding: 17 0 0 16;
+}
+
+.votesetcardicon
+{
+   float: right;
+    padding: 17 16 0 0;
+}
+
+.votenumlimit /*选项个数设置*/
+{
+    width: 204px;
+    height: 100px;
+    background: #ffffff;
+    position: absolute;
+    left: 36px;
+}
+
+.votenumlimitnum
+{
+    width: 85px;
+    height: 30px;
+    position: absolute;
+    top: 54px;
+    left: 16px;
+    font-size: 24px;
+    color: #546e7a;
+    border: 0;
+    border-bottom: 1px solid #546e7a;    
+}
+
+.votenumlimittext
+{
+    position: absolute;
+    top: 71px;
+    right: 42px;
+}
+
+.newvotetime /*投票截止时间限定*/
+{
+    width: 204px;
+    height: 204px;
+    background: #ffffff;
+    position: absolute;
+    left: 264px;
+}
+
+.selectyear
+{
+    width: 90px;
+    height: 32px;
+    background: #fafafa;
+    color: #546e7a;
+    font-size: 13px;
+    font-family: bold;
+    position: absolute;
+    top: 54px;
+    left: 15px;
+    border-radius: 5px;
+    border: 1px solid #f4f4f4;
+}
+
+.selectmonth
+{
+    width: 90px;
+    height: 32px;
+    background: #fafafa;
+    color: #546e7a;
+    font-size: 13px;
+    font-family: bold;
+    position: absolute;
+    bottom: 68px;
+    left: 15px;
+    border-radius: 5px;
+    border: 1px solid #f4f4f4;
+}
+
+.newvotesetday
+{
+    width: 42px;
+    height: 23px;
+    position: absolute;
+    bottom: 68px;
+    right: 45px;
+    font-size: 13px;
+    font-family: bold;
+    text-align: center;
+    color: #546e7a;
+    border: 0;
+    border-bottom: 1px solid #546e7a; 
+}
+
+.newvotesetdaytext
+{
+    position: absolute;
+    bottom: 72px;
+    right: 33px;
+}
+
+.newvotesethour
+{
+    width: 72px;
+    height: 23px;
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 18px;
+    font-family: bold;
+    text-align: center;
+    color: #546e7a;
+    border: 0;
+    border-bottom: 1px solid #546e7a; 
+}
+
+.newvotesetminute
+{
+    width: 72px;
+    height: 23px;
+    position: absolute;
+    bottom: 16px;
+    right: 30px;
+    font-size: 18px;
+    font-family: bold;
+    text-align: center;
+    color: #546e7a;
+    border: 0;
+    border-bottom: 1px solid #546e7a; 
+}
+
+.newvotetime span
+{
+    color: #546e7a;
+    font-size: 18px;
+    font-family: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 93px;
+}
+
+.newvotearea /*投票范围限定*/
+{
+    width: 204px;
+    height: 204px;
+    background: #ffffff;
+    position: absolute;
+    left: 492px;
+}
+
+.newvoteareaselect
+{
+    width: 90px;
+    position: absolute;
+    top: 54px;
+    left: 15px;
+}
+
+.selectcollege
+{
+    width: 90px;
+    height: 32px;
+    background: #fafafa;
+    color: #546e7a;
+    font-size: 13px;
+    font-family: bold;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    border: 1px solid #f4f4f4;
+}
+
+.newvotesetclass
+{
+    width: 42px;
+    height: 23px;
+    position: absolute;
+    bottom: 16px;
+    right: 45px;
+    font-size: 13px;
+    font-family: bold;
+    text-align: center;
+    color: #546e7a;
+    border: 0;
+    border-bottom: 1px solid #546e7a; 
+}
+
+.newvotesetclasstext
+{
+    position: absolute;
+    bottom: 22px;
+    right: 31px;
+}
+
+.newvotesetpsw /*投票密码*/
+{
+    width: 204px;
+    height: 140px;
+    background: #ffffff;
+    position: absolute;
+    right: 102px;
+}
+
+.newvotesetpswinputarea
+{
+    position: absolute;
+    top: 50px;
+    left: 15px;
+}
+
+.newvotesetpswinput
+{
+    width: 140px;
+    height: 20px;
+    background: #ffffff;
+    color: #bfcbd0;
+    font-size: 13px;
+    font-family: bold;
+    border: 0;
+    border-bottom: 1px solid #546e7a;
+    margin-bottom: 30px;
+}
+
+/*新建投票区*/
+.newvotecardbottom
+{
+    background: #ffffff;
+    width: 1026px;
+    height: 1000px;
+    position: absolute;
+    top: 150px;
+    padding-left: 13px;
+}
+
+.newvotecardbottom ul li
+{
+    float: left;
+    width: 204px;
+    height: 272px;
+
+    margin: 0 0 20px 25px;
+    border: 1px solid #f0f0f0;
+}
+
+.newvotecardbottom ul li img
+{
+    width: 204px;
+    height: 153px;
+}
+
+.newcard /*新建标签*/
+{
+    width: 204px;
+    height: 272px;
+    border: 1px dashed #bfcbd0;
+    background: url(../images/new.png) no-repeat 67px 102px;
+    cursor: pointer;
+}
+
+.newcard:hover
+{
+    border: 1px solid #bfcbd0;
+}
+
+.newcarddetailset /*投票每个卡片设置*/
+{
+    width: 501px;
+    height: 636px;
+    position: fixed;
+    top: 20px;
+    left: 465px;
+    background: #ffffff;
+    display: none;
+    z-index: 1;
+
+    -webkit-box-shadow: 0px 0px 30px #c6c6c6;
+    -moz-box-shadow: 0px 0px 30px #c6c6c6;
+    box-shadow: 0px 0px 30px #c6c6c6;
+}
+
+.newcardetailimg
+{
+    height: 200px;
+    background: url(../images/newvotedetail.png) no-repeat 220px 100px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.previewimg /*图片预览*/
+{
+    width: 300px;
+    height: 180px;
+    overflow: hidden;
+    position: absolute;
+    top: 19px;
+    left: 126px;
+    z-index: 10;
+    display: none;
+}
+
+.newcardsetover
+{
+    width: 38px;
+    height: 38px;
+    background: url(../images/newcardover.png);
+    position: absolute;
+    top: 181px;
+    right: 26px;
+    cursor: pointer;
+}
+
+.newcardtext
+{
+    position: absolute;
+    top: 250px;
+}
+
+.newcardtitle /*输入新建卡片标题*/
+{
+    width: 300px;
+    height: 22px;
+    color: #546e7a;
+    position: absolute;
+    top: 0px;
+    left: 38px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 0;
+    background: #ffffff;
+    
+}
+
+.newcardtitle::-webkit-input-placeholder { color:#546e7a;  font-style: italic;}/*ff*/
+.newcardtitle::-moz-placeholder { color:#546e7a;  font-style: italic; }/*chrome,safari*/
+.newcardtitle:-ms-input-placeholder{color:#546e7a;  font-style: italic;}/*ie10+*/
+
+.newcarddetail /*卡片说明说明*/
+{
+    width: 300px;
+    height: 150px;
+    color: #78909c;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 60px;
+    left: 38px;
+    border: 0;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.newcarddetail::-webkit-input-placeholder { color:#546e7a;  font-style: italic;}/*ff*/
+.newcarddetail::-moz-placeholder { color:#546e7a;  font-style: italic; }/*chrome,safari*/
+.newcarddetail:-ms-input-placeholder{color:#546e7a;  font-style: italic;}/*ie10+*/
+
+.unloadimg /*图片上传输入框*/
+{
+    width: 501px;
+    height: 200px;
+    filter:alpha(opacity:0);
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+} 
+

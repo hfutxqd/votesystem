@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<title>欢迎使用投票系统</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css"/>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<style>
+body{margin: 0px;border: 0px;background-color: #F2F2F2;}
+</style>
+</head>
+<body>
+<p>
+学号：<{$userinfo['user_id']}><br>
+姓名：<{$userinfo['user_name']}><br>
+学院：<{$userinfo['user_school']}><br>
+专业：<{$userinfo['user_class']}><br>
+年级：<{$userinfo['user_grade']}><br>
+班级：<{$userinfo['user_room']}><br>
+<br><br>
+<{if $userinfo['user_class'] eq null or $userinfo['user_grade'] eq null or $userinfo['user_room'] eq null}>
+
+<a href="<{spUrl c=user a=editUserInfo}>" target="_blank" class="btn btn-primary">完善个人信息</a>
+<{else}>
+<a href="<{spUrl c=user a=editUserInfo}>" target="_blank" class="btn btn-primary">修改个人信息</a>
+<{/if}>
+
+</p>
+</body>
+</html>

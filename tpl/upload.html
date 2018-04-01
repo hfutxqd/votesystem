@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title><{$title}></title>
+</head>
+<body>
+
+<h1><{$title}></h1>
+<{if $success}>
+<p><{$success}>  <a href="<{spUrl c=main a=test}>">继续上传</a><a href="<{spUrl c=main a=test}>">返回项目首页</a></p>
+<{elseif $errmsg}>
+<p><{$errmsg}>  <a href="<{spUrl c=main a=test}>">重新上传</a></p>
+<{else}>
+<div class="mt mb">
+<form method="POST" enctype="multipart/form-data" action="<{spUrl c=main a=test}>">
+  <input type="file" name="upfile"/>
+  <input type="submit" value="上传" class="btn" name="up"/>
+</form>
+</div>
+<{/if}>
+
+</body>
+</html>
